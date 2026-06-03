@@ -1,2 +1,7 @@
-# agurry.github.io
-Andrew Gurry - Army Veteran, Consultant, Builder, and Technology Enthusiast
+# AndrewGurry.com
+
+Personal portfolio website for Andrew Gurry.
+
+Built with HTML and CSS.
+Hosted with GitHub Pages.
+Custom domain: AndrewGurry.com
