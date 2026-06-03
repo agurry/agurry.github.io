@@ -5,11 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Andrew Gurry | Army Leader, Builder & Microsoft 365 Consultant</title>
+  <title>Andrew Gurry | Army Leader, Consultant & Builder</title>
 
-  <meta name="description" content="Andrew Gurry is a U.S. Army Master Sergeant, quality assurance professional, builder, and future Microsoft 365 consultant focused on SharePoint, Power Apps, Power Automate, Power BI, Microsoft Lists, and process improvement." />
+  <meta name="description" content="Andrew Gurry is a U.S. Army Master Sergeant, Department of the Army Inspector General of the Year finalist, MBA graduate, builder, and Microsoft 365 process improvement consultant." />
 
   <style>
+    :root {
+      --dark: #0f172a;
+      --dark-2: #111827;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --green: #16a34a;
+      --gray: #f3f4f6;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
@@ -18,76 +31,134 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f3f4f6;
-      color: #1f2937;
+      background: var(--gray);
+      color: var(--text);
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.95)),
+        radial-gradient(circle at top left, #2563eb, transparent 30%),
+        radial-gradient(circle at bottom right, #16a34a, transparent 25%);
       color: white;
-      padding: 85px 20px;
-      text-align: center;
+      padding: 90px 20px 70px;
     }
 
-    header h1 {
-      font-size: 3.2rem;
-      margin: 0 0 10px;
-      letter-spacing: 1px;
+    .hero-inner {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 40px;
+      align-items: center;
     }
 
-    header h2 {
-      font-size: 1.3rem;
+    .eyebrow {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.22);
+      color: #bfdbfe;
+      padding: 8px 14px;
+      border: 1px solid rgba(147, 197, 253, 0.35);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      line-height: 1.05;
+      margin: 0 0 16px;
+      letter-spacing: -1px;
+    }
+
+    .hero h2 {
+      font-size: 1.35rem;
       font-weight: normal;
       color: #cbd5e1;
-      margin: 0 auto 22px;
-      max-width: 950px;
+      margin: 0 0 24px;
+      max-width: 850px;
     }
 
-    header p {
-      font-size: 1.05rem;
-      max-width: 900px;
-      margin: 0 auto 28px;
+    .hero p {
       color: #e5e7eb;
+      font-size: 1.05rem;
+      max-width: 850px;
+      margin-bottom: 28px;
     }
 
     .hero-buttons a {
       display: inline-block;
-      margin: 8px;
-      padding: 13px 22px;
-      border-radius: 8px;
-      text-decoration: none;
+      margin: 6px 8px 6px 0;
+      padding: 13px 20px;
+      border-radius: 10px;
       font-weight: bold;
+      text-decoration: none;
       transition: 0.2s;
     }
 
     .primary-btn {
-      background: #2563eb;
+      background: var(--blue);
       color: white;
     }
 
     .primary-btn:hover {
-      background: #1d4ed8;
+      background: var(--blue-dark);
+      text-decoration: none;
     }
 
     .secondary-btn {
-      border: 2px solid white;
+      border: 1px solid rgba(255,255,255,0.7);
       color: white;
     }
 
     .secondary-btn:hover {
       background: white;
-      color: #111827;
+      color: var(--dark);
+      text-decoration: none;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .quick-list {
+      padding-left: 20px;
+      color: #e5e7eb;
+    }
+
+    .quick-list li {
+      margin-bottom: 8px;
     }
 
     nav {
-      background: #111827;
+      background: var(--dark-2);
       padding: 14px 10px;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
     }
 
     nav a {
@@ -100,144 +171,207 @@
 
     nav a:hover {
       color: #93c5fd;
+      text-decoration: none;
     }
 
     section {
       max-width: 1150px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 60px 20px;
     }
 
     .section-title {
-      font-size: 2.1rem;
-      margin-bottom: 8px;
-      color: #111827;
+      font-size: 2.15rem;
+      margin: 0 0 8px;
+      color: var(--dark-2);
+      letter-spacing: -0.5px;
     }
 
     .section-subtitle {
-      color: #4b5563;
-      margin-bottom: 30px;
+      color: var(--muted);
+      margin: 0 0 30px;
       font-size: 1.05rem;
+      max-width: 850px;
     }
 
     .card {
-      background: white;
-      border-radius: 14px;
-      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
       margin-bottom: 24px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
       gap: 22px;
     }
 
-    .project-card {
-      background: white;
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-      border-top: 5px solid #2563eb;
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
     }
 
-    .project-card h3 {
-      margin-top: 0;
-      color: #111827;
+    .stat {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .project-card,
+    .credential-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+
+    .project-card:hover,
+    .credential-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.10);
+    }
+
+    .project-card {
+      border-top: 5px solid var(--blue);
     }
 
     .credential-card {
-      background: white;
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-      border-left: 5px solid #16a34a;
+      border-left: 5px solid var(--green);
     }
 
+    .project-card h3,
     .credential-card h3 {
       margin-top: 0;
-      color: #111827;
+      margin-bottom: 10px;
+      color: var(--dark-2);
     }
 
     .tag {
       display: inline-block;
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: bold;
+      margin: 5px 5px 0 0;
+    }
+
+    .tag.green {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .tag.gray {
       background: #e5e7eb;
       color: #374151;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      margin: 4px 4px 0 0;
     }
 
     .highlight {
       background: #eff6ff;
-      border-left: 5px solid #2563eb;
+      border-left: 5px solid var(--blue);
       padding: 18px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-top: 20px;
     }
 
-    .quote-box {
-      background: #111827;
+    .service-list {
+      padding-left: 20px;
+    }
+
+    .service-list li {
+      margin-bottom: 8px;
+    }
+
+    .callout {
+      background: linear-gradient(135deg, var(--dark), #1e293b);
       color: white;
-      border-radius: 14px;
-      padding: 30px;
-      margin-top: 25px;
+      border-radius: 20px;
+      padding: 35px;
+      margin-top: 26px;
       text-align: center;
-      font-size: 1.15rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    }
+
+    .callout p {
+      color: #d1d5db;
+      margin-bottom: 0;
     }
 
     .contact-box {
       text-align: center;
-      background: #111827;
+      background: linear-gradient(135deg, var(--dark), #1e293b);
       color: white;
-      border-radius: 14px;
-      padding: 38px 20px;
+      border-radius: 20px;
+      padding: 42px 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
     }
 
     .contact-box a {
       color: #93c5fd;
       font-weight: bold;
-      text-decoration: none;
-    }
-
-    .contact-box a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      text-align: center;
-      padding: 24px;
-      font-size: 0.9rem;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    a {
-      color: #2563eb;
+      font-size: 1.15rem;
     }
 
     .small-note {
-      font-size: 0.9rem;
-      color: #6b7280;
+      font-size: 0.92rem;
+      color: var(--muted);
     }
 
-    @media (max-width: 700px) {
-      header {
-        padding: 65px 18px;
+    footer {
+      background: var(--dark-2);
+      color: #d1d5db;
+      text-align: center;
+      padding: 26px;
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      margin-top: 8px;
+    }
+
+    .footer-links a {
+      color: #93c5fd;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
       }
 
-      header h1 {
-        font-size: 2.35rem;
+      .hero {
+        padding: 70px 18px 55px;
       }
 
-      header h2 {
-        font-size: 1.1rem;
+      .hero h1 {
+        font-size: 2.55rem;
+      }
+
+      .hero h2 {
+        font-size: 1.15rem;
       }
 
       nav a {
@@ -246,7 +380,7 @@
       }
 
       section {
-        padding: 40px 18px;
+        padding: 45px 18px;
       }
     }
   </style>
@@ -255,23 +389,41 @@
 
 <body>
 
-  <header>
-    <h1>Andrew Gurry</h1>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">Army Leader • Consultant • Builder • Problem Solver</span>
 
 ```
-<h2>
-  Army Master Sergeant | 2024 Department of the Army IG of the Year Finalist | MBA | Builder | Microsoft 365 Consultant
-</h2>
+    <h1>Andrew Gurry</h1>
 
-<p>
-  I help people solve real problems with leadership, process improvement, practical technology,
-  Microsoft 365 tools, automation, and systems that actually make work easier.
-</p>
+    <h2>
+      U.S. Army Master Sergeant, 2024 Department of the Army Inspector General of the Year Finalist,
+      MBA graduate, and Microsoft 365 process improvement consultant.
+    </h2>
 
-<div class="hero-buttons">
-  <a href="#consulting" class="primary-btn">Consulting Services</a>
-  <a href="#projects" class="secondary-btn">View Projects</a>
-  <a href="#contact" class="secondary-btn">Contact Me</a>
+    <p>
+      I help leaders, teams, and small businesses turn messy processes into clear systems using
+      practical leadership, clean documentation, Microsoft 365 tools, automation, and common sense.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#consulting" class="primary-btn">Consulting Services</a>
+      <a href="#projects" class="secondary-btn">View Projects</a>
+      <a href="mailto:me@andrewgurry.com" class="secondary-btn">Email Me</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <h3>Core Strengths</h3>
+    <ul class="quick-list">
+      <li>Military leadership and accountability</li>
+      <li>Inspection and quality assurance experience</li>
+      <li>Microsoft 365, SharePoint, Lists, Power Apps, Power Automate, and Power BI</li>
+      <li>Business education with a finance focus</li>
+      <li>Hands-on builder with solar, Linux, web, automation, and home lab projects</li>
+    </ul>
+  </div>
 </div>
 ```
 
@@ -290,37 +442,55 @@
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <p class="section-subtitle">
-      Army-tested leadership, business education, practical technology, and problem-solving that works.
+      Army-tested leadership, business education, technical curiosity, and practical problem-solving.
     </p>
 
 ```
 <div class="card">
   <p>
-    I am a U.S. Army Master Sergeant with over 25 years of service and experience in
+    I am a U.S. Army Master Sergeant with more than 25 years of service and experience in
     leadership, inspections, quality assurance, training management, documentation,
-    program improvement, deployment operations, and organizational problem-solving.
+    deployment operations, program improvement, and organizational problem-solving.
   </p>
 
   <p>
-    As I transition toward military retirement, I am building a professional consulting
-    practice focused on Microsoft 365, SharePoint, Power Apps, Power Automate, Power BI,
-    Microsoft Lists, business process improvement, training systems, and practical automation.
+    As I transition toward military retirement, I am building a professional consulting practice
+    focused on Microsoft 365, SharePoint, Microsoft Lists, Power Apps, Power Automate, Power BI,
+    business process improvement, training systems, and practical automation.
   </p>
 
   <p>
-    My background combines military leadership, inspection experience, formal business education,
-    finance training, hands-on technology projects, and a lifetime of building, fixing, testing,
-    and improving things.
+    My background combines military leadership, Department of the Army-level recognition,
+    formal business education, finance training, hands-on technology projects, and a lifetime
+    of building, fixing, testing, and improving things.
   </p>
 
   <div class="highlight">
-    <strong>My focus:</strong> helping small businesses, teams, and organizations turn messy,
-    frustrating, repeated work into clear, simple, useful systems.
+    <strong>My focus:</strong> helping small businesses, teams, and organizations turn repeated
+    frustration into clear, simple, useful systems.
   </div>
 </div>
 
-<div class="quote-box">
-  Practical systems. Clear documentation. Better workflows. Less chaos.
+<div class="stat-grid">
+  <div class="stat">
+    <strong>25+</strong>
+    <span>Years of Army Service</span>
+  </div>
+
+  <div class="stat">
+    <strong>50+</strong>
+    <span>Convoy Missions Led Safely</span>
+  </div>
+
+  <div class="stat">
+    <strong>819</strong>
+    <span>CompTIA A+ Core 1 Score</span>
+  </div>
+
+  <div class="stat">
+    <strong>MBA</strong>
+    <span>Finance Focus, Honors</span>
+  </div>
 </div>
 ```
 
@@ -329,7 +499,7 @@
   <section id="credentials">
     <h2 class="section-title">Credentials & Recognition</h2>
     <p class="section-subtitle">
-      A record of military achievement, academic performance, technical growth, and professional development.
+      Military achievement, academic performance, technical growth, and professional development.
     </p>
 
 ```
@@ -339,7 +509,7 @@
     <ul>
       <li>Finalist, 2024 Department of the Army Inspector General of the Year Competition</li>
       <li>2011 165th Quartermaster NCO of the Year</li>
-      <li>Over 25 years of U.S. Army service</li>
+      <li>More than 25 years of U.S. Army service</li>
     </ul>
   </div>
 
@@ -353,7 +523,7 @@
   </div>
 
   <div class="credential-card">
-    <h3>Technology & Professional Development</h3>
+    <h3>Technology Development</h3>
     <ul>
       <li>CompTIA A+ Certification Candidate</li>
       <li>CompTIA A+ Core 1 Passed — Score: 819</li>
@@ -403,9 +573,9 @@
       This experience shaped my leadership style: plan carefully, communicate clearly,
       protect the team, and execute the mission.
     </p>
-    <span class="tag">Deployment</span>
-    <span class="tag">Convoy Operations</span>
-    <span class="tag">Leadership Under Pressure</span>
+    <span class="tag green">Deployment</span>
+    <span class="tag green">Convoy Operations</span>
+    <span class="tag green">Leadership Under Pressure</span>
   </div>
 
   <div class="project-card">
@@ -425,7 +595,7 @@
       Experience supporting Army school quality assurance, accreditation, course evaluation,
       documentation reviews, corrective action tracking, and continuous improvement.
     </p>
-    <span class="tag">QA</span>
+    <span class="tag">Quality Assurance</span>
     <span class="tag">Accreditation</span>
     <span class="tag">Evaluation</span>
   </div>
@@ -440,6 +610,17 @@
     <span class="tag">Documentation</span>
     <span class="tag">Instruction</span>
   </div>
+
+  <div class="project-card">
+    <h3>Process Improvement</h3>
+    <p>
+      Experience turning unclear or broken workflows into documented, repeatable systems
+      through trackers, SOPs, checklists, briefings, reviews, and corrective action tools.
+    </p>
+    <span class="tag">SOPs</span>
+    <span class="tag">Trackers</span>
+    <span class="tag">Continuous Improvement</span>
+  </div>
 </div>
 ```
 
@@ -448,56 +629,60 @@
   <section id="consulting">
     <h2 class="section-title">Consulting Services</h2>
     <p class="section-subtitle">
-      Practical support for small businesses, teams, and organizations that need better systems.
+      Practical support for small businesses, military teams, offices, and organizations that need better systems.
     </p>
 
 ```
-<div class="card">
+<div class="grid">
+  <div class="project-card">
+    <h3>Microsoft 365 Setup</h3>
+    <ul class="service-list">
+      <li>SharePoint structure</li>
+      <li>Microsoft Lists setup</li>
+      <li>Teams organization</li>
+      <li>OneDrive file structure</li>
+      <li>Document libraries and permissions planning</li>
+    </ul>
+    <span class="tag">SharePoint</span>
+    <span class="tag">Teams</span>
+    <span class="tag">Lists</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Power Platform</h3>
+    <ul class="service-list">
+      <li>Power Apps</li>
+      <li>Power Automate workflows</li>
+      <li>Power BI basic dashboards</li>
+      <li>Approval workflows</li>
+      <li>Task tracking and notification systems</li>
+    </ul>
+    <span class="tag">Power Apps</span>
+    <span class="tag">Power Automate</span>
+    <span class="tag">Power BI</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Business Process Improvement</h3>
+    <ul class="service-list">
+      <li>Workflow cleanup</li>
+      <li>Standard operating procedures</li>
+      <li>Task trackers</li>
+      <li>Inspection and compliance tools</li>
+      <li>Training and documentation support</li>
+    </ul>
+    <span class="tag">SOPs</span>
+    <span class="tag">Workflows</span>
+    <span class="tag">Training</span>
+  </div>
+</div>
+
+<div class="callout">
+  <h3>Best Fit</h3>
   <p>
-    I help people organize information, simplify work, automate repetitive tasks,
-    document processes, and build tools that make daily operations easier.
+    Small businesses, military teams, training organizations, offices, and leaders who know
+    their current process is broken but need help turning it into something simple, repeatable, and useful.
   </p>
-
-  <div class="grid">
-    <div>
-      <h3>Microsoft 365</h3>
-      <ul>
-        <li>SharePoint organization</li>
-        <li>Microsoft Lists setup</li>
-        <li>Teams structure</li>
-        <li>OneDrive organization</li>
-        <li>Document libraries and permissions planning</li>
-      </ul>
-    </div>
-
-    <div>
-      <h3>Power Platform</h3>
-      <ul>
-        <li>Power Apps</li>
-        <li>Power Automate workflows</li>
-        <li>Power BI basic dashboards</li>
-        <li>Approval workflows</li>
-        <li>Task tracking and notification systems</li>
-      </ul>
-    </div>
-
-    <div>
-      <h3>Business Process Improvement</h3>
-      <ul>
-        <li>Workflow cleanup</li>
-        <li>Standard operating procedures</li>
-        <li>Task trackers</li>
-        <li>Inspection and compliance tools</li>
-        <li>Training and documentation support</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="highlight">
-    <strong>Best fit:</strong> small businesses, military teams, training organizations,
-    offices, and leaders who know their current process is broken but need help turning it
-    into something simple and repeatable.
-  </div>
 </div>
 ```
 
@@ -532,10 +717,10 @@
       A hands-on technical project combining solar power, batteries, off-grid planning,
       inverters, electrical design, and crypto mining hardware into a mobile build.
     </p>
-    <span class="tag">Solar</span>
-    <span class="tag">Off-Grid</span>
-    <span class="tag">Crypto</span>
-    <span class="tag">DIY Power</span>
+    <span class="tag green">Solar</span>
+    <span class="tag green">Off-Grid</span>
+    <span class="tag green">Crypto</span>
+    <span class="tag green">DIY Power</span>
   </div>
 
   <div class="project-card">
@@ -568,10 +753,10 @@
       Planning and building solar systems, battery banks, inverter setups,
       backup power solutions, and practical off-grid experiments.
     </p>
-    <span class="tag">Solar</span>
-    <span class="tag">Batteries</span>
-    <span class="tag">Inverters</span>
-    <span class="tag">DIY</span>
+    <span class="tag green">Solar</span>
+    <span class="tag green">Batteries</span>
+    <span class="tag green">Inverters</span>
+    <span class="tag green">DIY</span>
   </div>
 
   <div class="project-card">
@@ -587,15 +772,15 @@
   </div>
 
   <div class="project-card">
-    <h3>Personal Website & Portfolio</h3>
+    <h3>AndrewGurry.com</h3>
     <p>
-      Built AndrewGurry.com as a professional portfolio using GitHub Pages,
-      custom domain DNS, Microsoft 365 email, and a simple static website approach.
+      Built this professional portfolio using GitHub Pages, custom domain DNS,
+      Microsoft 365 email, and a simple static website approach.
     </p>
-    <span class="tag">GitHub Pages</span>
-    <span class="tag">HTML</span>
-    <span class="tag">CSS</span>
-    <span class="tag">Microsoft 365</span>
+    <span class="tag gray">GitHub Pages</span>
+    <span class="tag gray">HTML</span>
+    <span class="tag gray">CSS</span>
+    <span class="tag gray">Microsoft 365</span>
   </div>
 
   <div class="project-card">
@@ -632,15 +817,8 @@
     Resume download coming soon.
   </p>
 
-  <!--
-  When you add your resume later, upload a file named resume.pdf
-  to this GitHub repository and replace the paragraph above with this:
-
-  <a class="primary-btn" href="resume.pdf" target="_blank">Download Resume</a>
-  -->
-
   <p class="small-note">
-    Note: Public resume version will not include home address or private personal information.
+    Public resume version will not include home address or private personal information.
   </p>
 </div>
 ```
@@ -649,14 +827,16 @@
 
   <section id="contact">
     <h2 class="section-title">Contact</h2>
+    <p class="section-subtitle">
+      Professional networking, consulting conversations, and project discussions.
+    </p>
 
 ```
 <div class="contact-box">
   <h3>Let’s build something useful.</h3>
 
   <p>
-    For consulting, professional networking, collaboration, or project discussions,
-    contact me at:
+    For consulting, professional networking, collaboration, or project discussions:
   </p>
 
   <p>
@@ -673,6 +853,12 @@
 
   <footer>
     © 2026 Andrew Gurry. All Rights Reserved.
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#projects">Projects</a>
+      <a href="mailto:me@andrewgurry.com">Contact</a>
+    </div>
   </footer>
 
 </body>
