@@ -1,146 +1,665 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew Gurry</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+  <title>Andrew Gurry | Army Leader, Builder & Microsoft 365 Consultant</title>
 
-        header {
-            background-color: #1f2937;
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
+  <meta name="description" content="Andrew Gurry is a U.S. Army Master Sergeant, quality assurance professional, builder, and future Microsoft 365 consultant focused on SharePoint, Power Apps, Power Automate, Power BI, and process improvement." />
 
-        nav {
-            background-color: #374151;
-            padding: 15px;
-            text-align: center;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.6;
+    }
 
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+      color: white;
+      padding: 85px 20px;
+      text-align: center;
+    }
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,.1);
-        }
+    header h1 {
+      font-size: 3.2rem;
+      margin: 0 0 10px;
+      letter-spacing: 1px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1f2937;
-            color: white;
-        }
+    header h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #cbd5e1;
+      margin: 0 auto 22px;
+      max-width: 950px;
+    }
 
-        .button {
-            display: inline-block;
-            background-color: #2563eb;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-    </style>
+    header p {
+      font-size: 1.05rem;
+      max-width: 900px;
+      margin: 0 auto 28px;
+      color: #e5e7eb;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 8px;
+      padding: 13px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .primary-btn {
+      background: #2563eb;
+      color: white;
+    }
+
+    .primary-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .secondary-btn {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .secondary-btn:hover {
+      background: white;
+      color: #111827;
+    }
+
+    nav {
+      background: #111827;
+      padding: 14px 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #93c5fd;
+    }
+
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      font-size: 2.1rem;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      color: #4b5563;
+      margin-bottom: 30px;
+      font-size: 1.05rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      border-top: 5px solid #2563eb;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .credential-card {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      border-left: 5px solid #16a34a;
+    }
+
+    .credential-card h3 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      color: #374151;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin: 4px 4px 0 0;
+    }
+
+    .highlight {
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 18px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .quote-box {
+      background: #111827;
+      color: white;
+      border-radius: 14px;
+      padding: 30px;
+      margin-top: 25px;
+      text-align: center;
+      font-size: 1.15rem;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: #111827;
+      color: white;
+      border-radius: 14px;
+      padding: 38px 20px;
+    }
+
+    .contact-box a {
+      color: #93c5fd;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 24px;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    a {
+      color: #2563eb;
+    }
+
+    .small-note {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 65px 18px;
+      }
+
+      header h1 {
+        font-size: 2.35rem;
+      }
+
+      header h2 {
+        font-size: 1.1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+
+      section {
+        padding: 40px 18px;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
 
-<header>
+  <header>
     <h1>Andrew Gurry</h1>
-    <p>Army Leader | Consultant | Builder | Problem Solver</p>
-</header>
 
-<nav>
+```
+<h2>
+  Army Master Sergeant | 2024 Department of the Army IG of the Year Finalist | MBA | Builder | Microsoft 365 Consultant
+</h2>
+
+<p>
+  I help people solve real problems with leadership, process improvement, practical technology,
+  Microsoft 365 tools, automation, and systems that actually make work easier.
+</p>
+
+<div class="hero-buttons">
+  <a href="#consulting" class="primary-btn">Consulting Services</a>
+  <a href="#projects" class="secondary-btn">View Projects</a>
+  <a href="#contact" class="secondary-btn">Contact Me</a>
+</div>
+```
+
+  </header>
+
+  <nav>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#experience">Experience</a>
     <a href="#consulting">Consulting</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-</nav>
+  </nav>
 
-<section>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-subtitle">
+      Army-tested leadership, business education, practical technology, and problem-solving that works.
+    </p>
 
-    <div class="card" id="about">
-        <h2>About Me</h2>
-        <p>
-            Welcome to my personal website. I am a U.S. Army Master Sergeant with over 25 years of service,
-            specializing in quality assurance, inspections, leadership development, and training management.
-            As I transition toward retirement, I am expanding into technology consulting with a focus on
-            Microsoft 365, SharePoint, Power Automate, Power Apps, and business process improvement.
-        </p>
+```
+<div class="card">
+  <p>
+    I am a U.S. Army Master Sergeant with over 25 years of service and experience in
+    leadership, inspections, quality assurance, training management, documentation,
+    program improvement, and organizational problem-solving.
+  </p>
+
+  <p>
+    As I transition toward military retirement, I am building a professional consulting
+    practice focused on Microsoft 365, SharePoint, Power Apps, Power Automate, Power BI,
+    Microsoft Lists, business process improvement, training systems, and practical automation.
+  </p>
+
+  <p>
+    My background combines military leadership, inspection experience, formal business education,
+    finance training, hands-on technology projects, and a lifetime of building, fixing, testing,
+    and improving things.
+  </p>
+
+  <div class="highlight">
+    <strong>My focus:</strong> helping small businesses, teams, and organizations turn messy,
+    frustrating, repeated work into clear, simple, useful systems.
+  </div>
+</div>
+
+<div class="quote-box">
+  Practical systems. Clear documentation. Better workflows. Less chaos.
+</div>
+```
+
+  </section>
+
+  <section id="credentials">
+    <h2 class="section-title">Credentials & Recognition</h2>
+    <p class="section-subtitle">
+      A record of military achievement, academic performance, technical growth, and professional development.
+    </p>
+
+```
+<div class="grid">
+  <div class="credential-card">
+    <h3>Military Recognition</h3>
+    <ul>
+      <li>Finalist, 2024 Department of the Army Inspector General of the Year Competition</li>
+      <li>2011 165th Quartermaster NCO of the Year</li>
+      <li>Over 25 years of U.S. Army service</li>
+    </ul>
+  </div>
+
+  <div class="credential-card">
+    <h3>Education</h3>
+    <ul>
+      <li>MBA with Honors, Finance Focus</li>
+      <li>B.S. Business Administration, Finance Focus, Cum Laude — Old Dominion University</li>
+      <li>Associate Degree, Summa Cum Laude — Thomas Nelson Community College</li>
+    </ul>
+  </div>
+
+  <div class="credential-card">
+    <h3>Technology & Professional Development</h3>
+    <ul>
+      <li>CompTIA A+ Certification Candidate</li>
+      <li>CompTIA A+ Core 1 Passed — Score: 819</li>
+      <li>Currently studying for CompTIA A+ Core 2</li>
+      <li>Microsoft 365, SharePoint, Power Apps, Power Automate, Microsoft Lists, and Power BI development focus</li>
+    </ul>
+  </div>
+
+  <div class="credential-card">
+    <h3>Additional Background</h3>
+    <ul>
+      <li>Former Less Than 200 Ton Near Coastal Master License Holder</li>
+      <li>Experience with Linux, Apache, home servers, automation, and technical troubleshooting</li>
+      <li>Hands-on builder with solar, batteries, crypto mining, woodworking, web projects, and DIY systems</li>
+    </ul>
+  </div>
+</div>
+```
+
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-subtitle">
+      Leadership, quality assurance, training, inspections, documentation, and execution.
+    </p>
+
+```
+<div class="grid">
+  <div class="project-card">
+    <h3>Army Leadership</h3>
+    <p>
+      More than 25 years of military service with experience leading Soldiers,
+      managing responsibility, solving problems, developing people, and working in
+      high-accountability environments.
+    </p>
+    <span class="tag">Leadership</span>
+    <span class="tag">Accountability</span>
+    <span class="tag">Team Development</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Inspector General Experience</h3>
+    <p>
+      Experience in inspections, standards, fact-finding, assistance, teaching,
+      training, and helping organizations identify problems and correct them.
+    </p>
+    <span class="tag">Inspections</span>
+    <span class="tag">Standards</span>
+    <span class="tag">Problem Solving</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Quality Assurance</h3>
+    <p>
+      Experience supporting Army school quality assurance, accreditation, course evaluation,
+      documentation reviews, corrective action tracking, and continuous improvement.
+    </p>
+    <span class="tag">QA</span>
+    <span class="tag">Accreditation</span>
+    <span class="tag">Evaluation</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Training Management</h3>
+    <p>
+      Background in instructor support, course management, test control procedures,
+      training documentation, briefings, after-action reviews, and organizational learning.
+    </p>
+    <span class="tag">Training</span>
+    <span class="tag">Documentation</span>
+    <span class="tag">Instruction</span>
+  </div>
+</div>
+```
+
+  </section>
+
+  <section id="consulting">
+    <h2 class="section-title">Consulting Services</h2>
+    <p class="section-subtitle">
+      Practical support for small businesses, teams, and organizations that need better systems.
+    </p>
+
+```
+<div class="card">
+  <p>
+    I help people organize information, simplify work, automate repetitive tasks,
+    document processes, and build tools that make daily operations easier.
+  </p>
+
+  <div class="grid">
+    <div>
+      <h3>Microsoft 365</h3>
+      <ul>
+        <li>SharePoint organization</li>
+        <li>Microsoft Lists setup</li>
+        <li>Teams structure</li>
+        <li>OneDrive organization</li>
+        <li>Document libraries and permissions planning</li>
+      </ul>
     </div>
 
-    <div class="card" id="projects">
-        <h2>Featured Projects</h2>
-
-        <ul>
-            <li>Solar Powered Crypto Mining Trailer</li>
-            <li>A-A Events Learning Platform</li>
-            <li>Power Apps Development</li>
-            <li>Power Automate Workflows</li>
-            <li>SharePoint Solutions</li>
-            <li>Raspberry Pi & Linux Projects</li>
-            <li>Home Lab & Network Automation</li>
-        </ul>
-
-        <a class="button" href="https://www.a-aevents.com" target="_blank">
-            Visit A-A Events
-        </a>
+    <div>
+      <h3>Power Platform</h3>
+      <ul>
+        <li>Power Apps</li>
+        <li>Power Automate workflows</li>
+        <li>Power BI basic dashboards</li>
+        <li>Approval workflows</li>
+        <li>Task tracking and notification systems</li>
+      </ul>
     </div>
 
-    <div class="card" id="consulting">
-        <h2>Consulting Services</h2>
-
-        <p>
-            I help organizations improve efficiency through Microsoft 365 solutions,
-            automation, process improvement, documentation, training, and technology integration.
-        </p>
-
-        <ul>
-            <li>Microsoft Lists</li>
-            <li>Power Apps</li>
-            <li>Power Automate</li>
-            <li>SharePoint</li>
-            <li>Training & Documentation</li>
-            <li>Process Improvement</li>
-        </ul>
+    <div>
+      <h3>Business Process Improvement</h3>
+      <ul>
+        <li>Workflow cleanup</li>
+        <li>Standard operating procedures</li>
+        <li>Task trackers</li>
+        <li>Inspection and compliance tools</li>
+        <li>Training and documentation support</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="card" id="contact">
-        <h2>Contact</h2>
+  <div class="highlight">
+    <strong>Best fit:</strong> small businesses, military teams, training organizations,
+    offices, and leaders who know their current process is broken but need help turning it
+    into something simple and repeatable.
+  </div>
+</div>
+```
 
-        <p>Email: <a href="mailto:me@andrewgurry.com">me@andrewgurry.com</a></p>
+  </section>
 
-        <p>Website: AndrewGurry.com</p>
-    </div>
+  <section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">
+      A few examples of the things I build, test, improve, and document.
+    </p>
 
-</section>
+```
+<div class="grid">
+  <div class="project-card">
+    <h3>A-A Events</h3>
+    <p>
+      A learning and blogging platform focused on Army topics, business,
+      technology, DIY projects, money, and life lessons.
+    </p>
+    <p>
+      <a href="https://www.a-aevents.com" target="_blank">Visit A-A Events</a>
+    </p>
+    <span class="tag">WordPress</span>
+    <span class="tag">Blogging</span>
+    <span class="tag">Affiliate Marketing</span>
+    <span class="tag">Learning</span>
+  </div>
 
-<footer>
+  <div class="project-card">
+    <h3>Solar-Powered Crypto Mining Trailer</h3>
+    <p>
+      A hands-on technical project combining solar power, batteries, off-grid planning,
+      inverters, electrical design, and crypto mining hardware into a mobile build.
+    </p>
+    <span class="tag">Solar</span>
+    <span class="tag">Off-Grid</span>
+    <span class="tag">Crypto</span>
+    <span class="tag">DIY Power</span>
+  </div>
+
+  <div class="project-card">
+    <h3>GurryWeb Home Lab</h3>
+    <p>
+      A personal home server and lab environment used for Linux, Apache, networking,
+      file sharing, automation, family technology projects, and server administration practice.
+    </p>
+    <span class="tag">Linux</span>
+    <span class="tag">Apache</span>
+    <span class="tag">Networking</span>
+    <span class="tag">Home Lab</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Power Apps & Automation</h3>
+    <p>
+      Building practical tools using Microsoft Power Apps, Power Automate,
+      Microsoft Lists, and SharePoint to reduce repetitive work and improve tracking.
+    </p>
+    <span class="tag">Power Apps</span>
+    <span class="tag">Power Automate</span>
+    <span class="tag">Microsoft Lists</span>
+    <span class="tag">SharePoint</span>
+  </div>
+
+  <div class="project-card">
+    <h3>DIY Solar & Battery Projects</h3>
+    <p>
+      Planning and building solar systems, battery banks, inverter setups,
+      backup power solutions, and practical off-grid experiments.
+    </p>
+    <span class="tag">Solar</span>
+    <span class="tag">Batteries</span>
+    <span class="tag">Inverters</span>
+    <span class="tag">DIY</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Military QA Tools</h3>
+    <p>
+      Developing trackers, SOPs, evaluation tools, meeting notes, inspection support products,
+      and documentation systems to support Army training quality assurance and accreditation.
+    </p>
+    <span class="tag">Quality Assurance</span>
+    <span class="tag">Training</span>
+    <span class="tag">Documentation</span>
+    <span class="tag">Corrective Actions</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Personal Website & Portfolio</h3>
+    <p>
+      Built AndrewGurry.com as a professional portfolio using GitHub Pages,
+      custom domain DNS, Microsoft 365 email, and a simple static website approach.
+    </p>
+    <span class="tag">GitHub Pages</span>
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">Microsoft 365</span>
+  </div>
+
+  <div class="project-card">
+    <h3>Apps, Scripts & Technical Experiments</h3>
+    <p>
+      Ongoing work with small apps, automation scripts, web tools, home technology,
+      Raspberry Pi projects, Linux servers, and practical technical problem-solving.
+    </p>
+    <span class="tag">Apps</span>
+    <span class="tag">Scripts</span>
+    <span class="tag">Automation</span>
+    <span class="tag">Troubleshooting</span>
+  </div>
+</div>
+```
+
+  </section>
+
+  <section id="resume">
+    <h2 class="section-title">Resume</h2>
+    <p class="section-subtitle">
+      A formal resume will be added here as my military retirement transition continues.
+    </p>
+
+```
+<div class="card">
+  <p>
+    My professional background includes military leadership, quality assurance,
+    inspections, training management, finance education, Microsoft 365 development,
+    process improvement, and hands-on technical projects.
+  </p>
+
+  <p>
+    Resume download coming soon.
+  </p>
+
+  <!--
+  When you add your resume later, upload a file named resume.pdf
+  to this GitHub repository and replace the paragraph above with this:
+
+  <a class="primary-btn" href="resume.pdf" target="_blank">Download Resume</a>
+  -->
+
+  <p class="small-note">
+    Note: Public resume version will not include home address or private personal information.
+  </p>
+</div>
+```
+
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+```
+<div class="contact-box">
+  <h3>Let’s build something useful.</h3>
+
+  <p>
+    For consulting, professional networking, collaboration, or project discussions,
+    contact me at:
+  </p>
+
+  <p>
+    <a href="mailto:me@andrewgurry.com">me@andrewgurry.com</a>
+  </p>
+
+  <p>
+    AndrewGurry.com
+  </p>
+</div>
+```
+
+  </section>
+
+  <footer>
     © 2026 Andrew Gurry. All Rights Reserved.
-</footer>
+  </footer>
 
 </body>
 </html>
