@@ -369,8 +369,46 @@
       margin: 0 8px;
     }
 
+
+    .photo-feature {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      margin-bottom: 26px;
+    }
+
+    .photo-feature img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+      object-fit: cover;
+    }
+
+    .photo-feature h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--dark-2);
+    }
+
+    .photo-feature p {
+      margin: 0 0 14px;
+    }
+
     @media (max-width: 850px) {
       .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-feature {
         grid-template-columns: 1fr;
       }
 
@@ -508,6 +546,26 @@
     <p class="section-subtitle">
       Military achievement, academic performance, technical growth, and professional development.
     </p>
+
+    <div class="photo-feature">
+      <div>
+        <img src="images/award-photo.jpg" alt="Andrew Gurry receiving recognition as a finalist in the 2024 Department of the Army Inspector General of the Year competition." />
+      </div>
+      <div>
+        <h3>2024 DA IG of the Year Finalist</h3>
+        <p>
+          This photo shows me receiving recognition as a finalist in the
+          2024 Department of the Army Inspector General of the Year competition.
+        </p>
+        <p>
+          It represents one of the proudest professional moments of my Army career and connects directly to my work in
+          Inspector General operations, quality assurance, inspections, training, and organizational improvement.
+        </p>
+        <span class="tag green">Army Leadership</span>
+        <span class="tag green">Recognition</span>
+        <span class="tag green">Professional Service</span>
+      </div>
+    </div>
 
     <div class="grid">
       <div class="credential-card">
