@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +6,7 @@
 
   <title>Andrew Gurry | Army Leader, Process Automation Consultant & Builder</title>
 
-  <meta name="description" content="Andrew Gurry is a U.S. Army Master Sergeant, Department of the Army Inspector General of the Year finalist, MBA graduate, builder, and process automation consultant helping teams build clear systems, workflows, dashboards, and documentation." />
+  <meta name="description" content="Andrew Gurry is a U.S. Army Master Sergeant, Quality Assurance Evaluator, Department of the Army Inspector General finalist, MBA graduate, and process automation consultant helping teams build clear workflows, dashboards, documentation, and practical systems." />
 
   <style>
     :root {
@@ -22,6 +20,7 @@
       --muted: #6b7280;
       --card: #ffffff;
       --border: #e5e7eb;
+      --gold: #f59e0b;
     }
 
     * {
@@ -239,7 +238,8 @@
     }
 
     .project-card,
-    .credential-card {
+    .credential-card,
+    .impact-card {
       background: white;
       border: 1px solid var(--border);
       border-radius: 18px;
@@ -249,7 +249,8 @@
     }
 
     .project-card:hover,
-    .credential-card:hover {
+    .credential-card:hover,
+    .impact-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 14px 28px rgba(0,0,0,0.10);
     }
@@ -262,8 +263,13 @@
       border-left: 5px solid var(--green);
     }
 
+    .impact-card {
+      border-top: 5px solid var(--gold);
+    }
+
     .project-card h3,
-    .credential-card h3 {
+    .credential-card h3,
+    .impact-card h3 {
       margin-top: 0;
       margin-bottom: 10px;
       color: var(--dark-2);
@@ -288,6 +294,11 @@
     .tag.gray {
       background: #e5e7eb;
       color: #374151;
+    }
+
+    .tag.gold {
+      background: #fef3c7;
+      color: #92400e;
     }
 
     .highlight {
@@ -358,8 +369,46 @@
       margin: 0 8px;
     }
 
+
+    .photo-feature {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      margin-bottom: 26px;
+    }
+
+    .photo-feature img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+      object-fit: cover;
+    }
+
+    .photo-feature h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--dark-2);
+    }
+
+    .photo-feature p {
+      margin: 0 0 14px;
+    }
+
     @media (max-width: 850px) {
       .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-feature {
         grid-template-columns: 1fr;
       }
 
@@ -385,53 +434,51 @@
       }
     }
   </style>
-
 </head>
 
 <body>
-
   <header class="hero">
     <div class="hero-inner">
       <div>
-        <span class="eyebrow">Army Leader • Process Automation Consultant • Builder • Problem Solver</span>
+        <span class="eyebrow">Army Leader • Process Automation Consultant • Quality Assurance Evaluator • Builder</span>
 
-    <h1>Andrew Gurry</h1>
+        <h1>Andrew Gurry</h1>
 
-    <h2>
-      U.S. Army Master Sergeant, 2024 Department of the Army Inspector General of the Year Finalist,
-      MBA graduate, and process automation consultant.
-    </h2>
+        <h2>
+          U.S. Army Master Sergeant, Quality Assurance Evaluator, 2024 Department of the Army
+          Inspector General of the Year finalist, MBA graduate, and process automation consultant.
+        </h2>
 
-    <p>
-      I help leaders, teams, and small businesses turn messy processes into clear, repeatable systems
-      using practical leadership, clean documentation, workflow design, automation tools, dashboards, and common sense.
-    </p>
+        <p>
+          I help leaders, teams, and small businesses turn messy processes into clear, repeatable systems
+          using practical leadership, workflow design, clean documentation, dashboards, automation tools, and common sense.
+        </p>
 
-    <div class="hero-buttons">
-      <a href="#consulting" class="primary-btn">Process Automation Services</a>
-      <a href="#projects" class="secondary-btn">View Projects</a>
-      <a href="mailto:me@andrewgurry.com" class="secondary-btn">Email Me</a>
+        <div class="hero-buttons">
+          <a href="#consulting" class="primary-btn">Process Automation Services</a>
+          <a href="#impact" class="secondary-btn">See Impact</a>
+          <a href="mailto:me@andrewgurry.com" class="secondary-btn">Email Me</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Core Strengths</h3>
+        <ul class="quick-list">
+          <li>Military leadership, accountability, and high-pressure execution</li>
+          <li>Inspector General, quality assurance, and training management experience</li>
+          <li>Process automation, workflow design, dashboards, trackers, and documentation systems</li>
+          <li>Business education with a finance focus</li>
+          <li>Hands-on builder with web, Linux, automation, home lab, solar, and DIY technology projects</li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="hero-card">
-    <h3>Core Strengths</h3>
-    <ul class="quick-list">
-      <li>Military leadership and accountability</li>
-      <li>Inspection and quality assurance experience</li>
-      <li>Process automation, workflow design, dashboards, documentation, and low-code tools</li>
-      <li>Business education with a finance focus</li>
-      <li>Hands-on builder with solar, Linux, web, automation, and home lab projects</li>
-    </ul>
-  </div>
-</div>
-
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#credentials">Credentials</a>
     <a href="#experience">Experience</a>
+    <a href="#impact">Impact</a>
     <a href="#consulting">Automation</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
@@ -444,53 +491,54 @@
       Army-tested leadership, business education, technical curiosity, and practical problem-solving.
     </p>
 
-<div class="card">
-  <p>
-    I am a U.S. Army Master Sergeant with more than 25 years of service and experience in
-    leadership, inspections, quality assurance, training management, documentation,
-    deployment operations, program improvement, and organizational problem-solving.
-  </p>
+    <div class="card">
+      <p>
+        I am a U.S. Army Master Sergeant and Quality Assurance Evaluator with the 4th Brigade (MI),
+        102nd Training Division (MS). I enlisted in the United States Army in 2000 and have served in
+        the Active Army and Army Reserve in leadership, training, inspection, transportation, maritime,
+        and quality assurance roles.
+      </p>
 
-  <p>
-    As I transition toward military retirement, I am building a professional consulting practice
-    focused on process automation, workflow improvement, documentation systems, dashboards,
-    training systems, and practical tools that reduce repetitive work.
-  </p>
+      <p>
+        My previous assignments include 80th Training Command (TASS) Inspector General NCO,
+        Chief of Operations and Training for the Mission Command Technologies Integration Program,
+        Vessel Master and Boatswain, Marine Operations NCO, Detachment Sergeant, Watercraft Operations NCO,
+        Squad Leader, Coxswain, and Watercraft Operator.
+      </p>
 
-  <p>
-    My background combines military leadership, Department of the Army-level recognition,
-    formal business education, finance training, hands-on technology projects, and a lifetime
-    of building, fixing, testing, and improving things.
-  </p>
+      <p>
+        As I transition toward military retirement, I am building a professional consulting practice focused on
+        process automation, workflow improvement, documentation systems, dashboards, training systems,
+        and practical tools that reduce repetitive work and improve decision-making.
+      </p>
 
-  <div class="highlight">
-    <strong>My focus:</strong> helping small businesses, teams, and organizations turn repeated
-    frustration into clear, simple, useful systems.
-  </div>
-</div>
+      <div class="highlight">
+        <strong>My focus:</strong> helping small businesses, military teams, offices, and organizations turn repeated
+        frustration into clear, simple, measurable, useful systems.
+      </div>
+    </div>
 
-<div class="stat-grid">
-  <div class="stat">
-    <strong>25+</strong>
-    <span>Years of Army Service</span>
-  </div>
+    <div class="stat-grid">
+      <div class="stat">
+        <strong>25+</strong>
+        <span>Years of Army Service</span>
+      </div>
 
-  <div class="stat">
-    <strong>50+</strong>
-    <span>Convoy Missions Led Safely</span>
-  </div>
+      <div class="stat">
+        <strong>50+</strong>
+        <span>Convoy Missions Led Safely</span>
+      </div>
 
-  <div class="stat">
-    <strong>819</strong>
-    <span>CompTIA A+ Core 1 Score</span>
-  </div>
+      <div class="stat">
+        <strong>5,000+</strong>
+        <span>Soldiers Reached Through Training</span>
+      </div>
 
-  <div class="stat">
-    <strong>MBA</strong>
-    <span>Finance Focus, Honors</span>
-  </div>
-</div>
-
+      <div class="stat">
+        <strong>819</strong>
+        <span>CompTIA A+ Core 1 Score</span>
+      </div>
+    </div>
   </section>
 
   <section id="credentials">
@@ -499,124 +547,207 @@
       Military achievement, academic performance, technical growth, and professional development.
     </p>
 
-<div class="grid">
-  <div class="credential-card">
-    <h3>Military Recognition</h3>
-    <ul>
-      <li>Finalist, 2024 Department of the Army Inspector General of the Year Competition</li>
-      <li>2011 165th Quartermaster NCO of the Year</li>
-      <li>More than 25 years of U.S. Army service</li>
-    </ul>
-  </div>
+    <div class="photo-feature">
+      <div>
+        <img src="images/award-photo.jpg" alt="Andrew Gurry receiving a Department of the Army certificate during an award and recognition ceremony." />
+      </div>
+      <div>
+        <h3>Recognition in Action</h3>
+        <p>
+          This photo captures one of the professional recognition moments highlighted on this site and reflects
+          my long-term commitment to service, leadership, and excellence.
+        </p>
+        <p>
+          It pairs well with the credentials below, including my selection as a finalist in the
+          2024 Department of the Army Inspector General of the Year competition and my broader work in
+          quality assurance, inspections, training, and organizational improvement.
+        </p>
+        <span class="tag green">Army Leadership</span>
+        <span class="tag green">Recognition</span>
+        <span class="tag green">Professional Service</span>
+      </div>
+    </div>
 
-  <div class="credential-card">
-    <h3>Education</h3>
-    <ul>
-      <li>MBA with Honors, Finance Focus</li>
-      <li>B.S. Business Administration, Finance Focus, Cum Laude — Old Dominion University</li>
-      <li>Associate Degree, Summa Cum Laude — Thomas Nelson Community College</li>
-    </ul>
-  </div>
+    <div class="grid">
+      <div class="credential-card">
+        <h3>Military Recognition</h3>
+        <ul>
+          <li>Finalist, 2024 Department of the Army Inspector General of the Year Competition</li>
+          <li>165th Quartermaster Group NCO of the Year</li>
+          <li>Distinguished Honor Graduate, Advanced Leader Course</li>
+          <li>Commandant's List and Lead Motivator, Senior Leader Course</li>
+          <li>Commandant's List, Battle Staff Noncommissioned Officer Course</li>
+        </ul>
+      </div>
 
-  <div class="credential-card">
-    <h3>Technology Development</h3>
-    <ul>
-      <li>CompTIA A+ Certification Candidate</li>
-      <li>CompTIA A+ Core 1 Passed — Score: 819</li>
-      <li>Currently studying for CompTIA A+ Core 2</li>
-      <li>Process automation, workflow mapping, low-code tools, dashboards, and documentation systems</li>
-    </ul>
-  </div>
+      <div class="credential-card">
+        <h3>Education</h3>
+        <ul>
+          <li>MBA with Honors, Finance Focus - American Military University</li>
+          <li>B.S. Business Administration, Finance Focus, Cum Laude - Old Dominion University</li>
+          <li>Associate Degree, Summa Cum Laude - Thomas Nelson Community College</li>
+          <li>W.T. Woodson High School, Fairfax, Virginia</li>
+        </ul>
+      </div>
 
-  <div class="credential-card">
-    <h3>Additional Background</h3>
-    <ul>
-      <li>Former Less Than 200 Ton Near Coastal Master License Holder</li>
-      <li>Experience with Linux, Apache, home servers, automation, and technical troubleshooting</li>
-      <li>Hands-on builder with solar, batteries, crypto mining, woodworking, web projects, and DIY systems</li>
-    </ul>
-  </div>
-</div>
+      <div class="credential-card">
+        <h3>IG, QA & Leadership Development</h3>
+        <ul>
+          <li>Quality Assurance Evaluator, 4th Brigade (MI), 102nd Training Division (MS)</li>
+          <li>Former 80th Training Command (TASS) Inspector General NCO</li>
+          <li>Master Leader Course graduate</li>
+          <li>Advanced Inspector General Course graduate with a Go+ rating</li>
+          <li>USARC Automated Inspection Program training and Whistleblower Reprisal Course</li>
+        </ul>
+      </div>
 
+      <div class="credential-card">
+        <h3>Awards, Skills & Technical Growth</h3>
+        <ul>
+          <li>Meritorious Service Medal, Army Commendation Medal, and Army Achievement Medal recipient</li>
+          <li>Former Less Than 200 Gross Ton Commercial Vessel Master License holder</li>
+          <li>Senior Army Mariner Skill Rating and Army maritime operations background</li>
+          <li>CompTIA A+ Core 1 passed - score: 819; currently studying Core 2</li>
+          <li>Experience with Linux, Apache, home servers, automation, and technical troubleshooting</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="experience">
     <h2 class="section-title">Professional Experience</h2>
     <p class="section-subtitle">
-      Leadership, deployment operations, quality assurance, training, inspections, documentation, and execution.
+      Leadership, deployment operations, quality assurance, training, inspections, documentation, maritime operations, and execution.
     </p>
 
-<div class="grid">
-  <div class="project-card">
-    <h3>Army Leadership</h3>
-    <p>
-      More than 25 years of military service with experience leading Soldiers,
-      managing responsibility, solving problems, developing people, and working in
-      high-accountability environments.
-    </p>
-    <span class="tag">Leadership</span>
-    <span class="tag">Accountability</span>
-    <span class="tag">Team Development</span>
-  </div>
+    <div class="grid">
+      <div class="project-card">
+        <h3>Army Leadership</h3>
+        <p>
+          More than 25 years of service leading Soldiers, managing responsibility, solving problems,
+          developing people, and working in high-accountability environments across Active Army and Army Reserve assignments.
+        </p>
+        <span class="tag">Leadership</span>
+        <span class="tag">Accountability</span>
+        <span class="tag">Team Development</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Deployment Leadership</h3>
-    <p>
-      Deployed to Kuwait in 2003 and Iraq from 2006–2007. During deployment,
-      I led troops on more than 50 convoy missions safely and without incident.
-      This experience shaped my leadership style: plan carefully, communicate clearly,
-      protect the team, and execute the mission.
-    </p>
-    <span class="tag green">Deployment</span>
-    <span class="tag green">Convoy Operations</span>
-    <span class="tag green">Leadership Under Pressure</span>
-  </div>
+      <div class="project-card">
+        <h3>Deployment Leadership</h3>
+        <p>
+          Served in two overseas deployments supporting Operation Enduring Freedom and Operation Iraqi Freedom.
+          Led Soldiers on more than 50 convoy missions to Sadr City, Iraq, ensuring safe and successful mission execution.
+        </p>
+        <span class="tag green">Deployment</span>
+        <span class="tag green">Convoy Operations</span>
+        <span class="tag green">Leadership Under Pressure</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Inspector General Experience</h3>
-    <p>
-      Experience in inspections, standards, fact-finding, assistance, teaching,
-      training, and helping organizations identify problems and correct them.
-    </p>
-    <span class="tag">Inspections</span>
-    <span class="tag">Standards</span>
-    <span class="tag">Problem Solving</span>
-  </div>
+      <div class="project-card">
+        <h3>Inspector General Experience</h3>
+        <p>
+          Experience in inspections, standards, fact-finding, assistance, teaching, training, systemic issue analysis,
+          and helping organizations identify problems and correct them.
+        </p>
+        <span class="tag">Inspections</span>
+        <span class="tag">Standards</span>
+        <span class="tag">Problem Solving</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Quality Assurance</h3>
-    <p>
-      Experience supporting Army school quality assurance, accreditation, course evaluation,
-      documentation reviews, corrective action tracking, and continuous improvement.
-    </p>
-    <span class="tag">Quality Assurance</span>
-    <span class="tag">Accreditation</span>
-    <span class="tag">Evaluation</span>
-  </div>
+      <div class="project-card">
+        <h3>Quality Assurance</h3>
+        <p>
+          Current and prior experience supporting Army school quality assurance, accreditation, course evaluation,
+          documentation reviews, corrective action tracking, and continuous improvement.
+        </p>
+        <span class="tag">Quality Assurance</span>
+        <span class="tag">Accreditation</span>
+        <span class="tag">Evaluation</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Training Management</h3>
-    <p>
-      Background in instructor support, course management, test control procedures,
-      training documentation, briefings, after-action reviews, and organizational learning.
-    </p>
-    <span class="tag">Training</span>
-    <span class="tag">Documentation</span>
-    <span class="tag">Instruction</span>
-  </div>
+      <div class="project-card">
+        <h3>Training Management</h3>
+        <p>
+          Background in instructor support, course management, test control procedures, professional development classes,
+          training documentation, briefings, after-action reviews, and organizational learning.
+        </p>
+        <span class="tag">Training</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Instruction</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Process Improvement</h3>
-    <p>
-      Experience turning unclear or broken workflows into documented, repeatable systems
-      through trackers, SOPs, checklists, briefings, reviews, and corrective action tools.
-    </p>
-    <span class="tag">SOPs</span>
-    <span class="tag">Trackers</span>
-    <span class="tag">Continuous Improvement</span>
-  </div>
-</div>
+      <div class="project-card">
+        <h3>Maritime & Transportation Operations</h3>
+        <p>
+          Served in Army watercraft, marine operations, transportation, detachment leadership, and vessel roles,
+          including Vessel Master, Boatswain, Coxswain, Watercraft Operator, and Marine Operations NCO duties.
+        </p>
+        <span class="tag gray">Maritime</span>
+        <span class="tag gray">Transportation</span>
+        <span class="tag gray">Operations</span>
+      </div>
+    </div>
+  </section>
 
+  <section id="impact">
+    <h2 class="section-title">Organizational Impact</h2>
+    <p class="section-subtitle">
+      Real examples of process improvement, training systems, and practical automation from Army organizations.
+    </p>
+
+    <div class="grid">
+      <div class="impact-card">
+        <h3>80th IG Teach & Train Initiative</h3>
+        <p>
+          Founded and helped lead the 80th IG Teach and Train Team to address systemic issues and share best practices
+          beyond individual inspections. The initiative used accessible training sessions to reach Soldiers and Civilians across the command.
+        </p>
+        <span class="tag gold">Training System</span>
+        <span class="tag gold">Systemic Issues</span>
+        <span class="tag gold">Scale</span>
+      </div>
+
+      <div class="impact-card">
+        <h3>Systems Access Tool</h3>
+        <p>
+          Identified a bottleneck affecting line units with minimal full-time staffing and built a user-friendly systems access tool
+          to simplify access requirements, required training, renewal timelines, and productivity for daily work.
+        </p>
+        <span class="tag gold">Workflow Cleanup</span>
+        <span class="tag gold">Access Tracking</span>
+        <span class="tag gold">Productivity</span>
+      </div>
+
+      <div class="impact-card">
+        <h3>Professional Development Classes</h3>
+        <p>
+          Led and coordinated classes on the NCO Professional Development System, retirement, the Organizational Inspection Program,
+          accelerated reclassification, IPPS-A, quality assurance, and other topics affecting Soldiers and staff processes.
+        </p>
+        <span class="tag gold">Instruction</span>
+        <span class="tag gold">Leader Development</span>
+        <span class="tag gold">Knowledge Sharing</span>
+      </div>
+
+      <div class="impact-card">
+        <h3>Culture, Mentorship & Unit Effectiveness</h3>
+        <p>
+          Used inspections, sensing sessions, and mentorship to help leaders understand how treatment of Soldiers affects trust,
+          morale, unit cohesion, and operational effectiveness.
+        </p>
+        <span class="tag gold">Mentorship</span>
+        <span class="tag gold">Culture</span>
+        <span class="tag gold">Effectiveness</span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>What This Means for Consulting</h3>
+      <p>
+        My strongest work is not tied to one software platform. It is finding the real bottleneck, simplifying the process,
+        documenting the system, training the users, and building a tool people will actually use.
+      </p>
+    </div>
   </section>
 
   <section id="consulting">
@@ -626,72 +757,99 @@
       less repetitive work, better tracking, and useful systems that people will actually use.
     </p>
 
-<div class="grid">
-  <div class="project-card">
-    <h3>Workflow & Process Automation</h3>
-    <ul class="service-list">
-      <li>Workflow mapping and cleanup</li>
-      <li>Intake forms and request tracking</li>
-      <li>Approval and routing systems</li>
-      <li>Task reminders and notification flows</li>
-      <li>Repeatable systems that reduce manual follow-up</li>
-    </ul>
-    <span class="tag">Automation</span>
-    <span class="tag">Workflows</span>
-    <span class="tag">Tracking</span>
-  </div>
+    <div class="grid">
+      <div class="project-card">
+        <h3>Workflow & Process Automation</h3>
+        <ul class="service-list">
+          <li>Workflow mapping and cleanup</li>
+          <li>Intake forms and request tracking</li>
+          <li>Approval and routing systems</li>
+          <li>Task reminders and notification flows</li>
+          <li>Repeatable systems that reduce manual follow-up</li>
+        </ul>
+        <span class="tag">Automation</span>
+        <span class="tag">Workflows</span>
+        <span class="tag">Tracking</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Dashboards, Trackers & Reporting</h3>
-    <ul class="service-list">
-      <li>Simple dashboards for leaders and teams</li>
-      <li>Status trackers and action item logs</li>
-      <li>Inspection and compliance tools</li>
-      <li>Power BI, spreadsheet, and list-based reporting</li>
-      <li>Clear metrics that show what is done, late, blocked, or at risk</li>
-    </ul>
-    <span class="tag">Dashboards</span>
-    <span class="tag">Reporting</span>
-    <span class="tag">Metrics</span>
-  </div>
+      <div class="project-card">
+        <h3>Dashboards, Trackers & Reporting</h3>
+        <ul class="service-list">
+          <li>Simple dashboards for leaders and teams</li>
+          <li>Status trackers and action item logs</li>
+          <li>Inspection and compliance tools</li>
+          <li>Power BI, spreadsheet, and list-based reporting</li>
+          <li>Clear metrics that show what is done, late, blocked, or at risk</li>
+        </ul>
+        <span class="tag">Dashboards</span>
+        <span class="tag">Reporting</span>
+        <span class="tag">Metrics</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Documentation & System Design</h3>
-    <ul class="service-list">
-      <li>Standard operating procedures</li>
-      <li>Checklists and job aids</li>
-      <li>Training and onboarding support</li>
-      <li>File structure and knowledge management</li>
-      <li>Practical systems built around how people actually work</li>
-    </ul>
-    <span class="tag">SOPs</span>
-    <span class="tag">Documentation</span>
-    <span class="tag">Training</span>
-  </div>
+      <div class="project-card">
+        <h3>Documentation & System Design</h3>
+        <ul class="service-list">
+          <li>Standard operating procedures</li>
+          <li>Checklists and job aids</li>
+          <li>Training and onboarding support</li>
+          <li>File structure and knowledge management</li>
+          <li>Practical systems built around how people actually work</li>
+        </ul>
+        <span class="tag">SOPs</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Training</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Microsoft 365 & Low-Code Tools</h3>
-    <ul class="service-list">
-      <li>SharePoint, Microsoft Lists, Teams, and OneDrive organization</li>
-      <li>Power Apps and Power Automate workflows</li>
-      <li>Power BI basic dashboards</li>
-      <li>Spreadsheet automation and cleanup</li>
-      <li>Tool selection based on the problem, not the brand name</li>
-    </ul>
-    <span class="tag">Microsoft 365</span>
-    <span class="tag">Power Platform</span>
-    <span class="tag">Low-Code</span>
-  </div>
-</div>
+      <div class="project-card">
+        <h3>Microsoft 365 & Low-Code Tools</h3>
+        <ul class="service-list">
+          <li>SharePoint, Microsoft Lists, Teams, and OneDrive organization</li>
+          <li>Power Apps and Power Automate workflows</li>
+          <li>Power BI basic dashboards</li>
+          <li>Spreadsheet automation and cleanup</li>
+          <li>Tool selection based on the problem, not the brand name</li>
+        </ul>
+        <span class="tag">Microsoft 365</span>
+        <span class="tag">Power Platform</span>
+        <span class="tag">Low-Code</span>
+      </div>
 
-<div class="callout">
-  <h3>Best Fit</h3>
-  <p>
-    Small businesses, military teams, training organizations, offices, and leaders who know
-    their current process is broken but need help turning it into something simple, repeatable, measurable, and useful.
-  </p>
-</div>
+      <div class="project-card">
+        <h3>Training Systems & Knowledge Sharing</h3>
+        <ul class="service-list">
+          <li>Training plans and recurring knowledge sessions</li>
+          <li>Job aids for complex systems access or admin requirements</li>
+          <li>Onboarding guides and role-based checklists</li>
+          <li>Leader-friendly documentation that survives turnover</li>
+          <li>Simple ways to teach without overwhelming the team</li>
+        </ul>
+        <span class="tag">Training</span>
+        <span class="tag">Onboarding</span>
+        <span class="tag">Knowledge Management</span>
+      </div>
 
+      <div class="project-card">
+        <h3>Inspection, Compliance & Corrective Action Tools</h3>
+        <ul class="service-list">
+          <li>Inspection trackers and corrective action logs</li>
+          <li>Evidence collection and review workflows</li>
+          <li>Recurring requirement trackers</li>
+          <li>Command, office, and small business compliance dashboards</li>
+          <li>Lessons-learned systems that turn findings into fixes</li>
+        </ul>
+        <span class="tag">Inspection</span>
+        <span class="tag">Compliance</span>
+        <span class="tag">Corrective Actions</span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>Best Fit</h3>
+      <p>
+        Small businesses, military teams, training organizations, offices, and leaders who know their current process is broken
+        but need help turning it into something simple, repeatable, measurable, and useful.
+      </p>
+    </div>
   </section>
 
   <section id="projects">
@@ -700,107 +858,103 @@
       A few examples of the things I build, test, improve, and document.
     </p>
 
-<div class="grid">
-  <div class="project-card">
-    <h3>A-A Events</h3>
-    <p>
-      A learning and blogging platform focused on Army topics, business,
-      technology, DIY projects, money, and life lessons.
-    </p>
-    <p>
-      <a href="https://www.a-aevents.com" target="_blank" rel="noopener noreferrer">Visit A-A Events</a>
-    </p>
-    <span class="tag">WordPress</span>
-    <span class="tag">Blogging</span>
-    <span class="tag">Affiliate Marketing</span>
-    <span class="tag">Learning</span>
-  </div>
+    <div class="grid">
+      <div class="project-card">
+        <h3>IG Teach & Train</h3>
+        <p>
+          Built a recurring training and communication platform to address systemic issues, share best practices,
+          and provide practical education to Soldiers and Civilians across the command.
+        </p>
+        <span class="tag gold">Training</span>
+        <span class="tag gold">Process Improvement</span>
+        <span class="tag gold">Organizational Learning</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Solar-Powered Crypto Mining Trailer</h3>
-    <p>
-      A hands-on technical project combining solar power, batteries, off-grid planning,
-      inverters, electrical design, and crypto mining hardware into a mobile build.
-    </p>
-    <span class="tag green">Solar</span>
-    <span class="tag green">Off-Grid</span>
-    <span class="tag green">Crypto</span>
-    <span class="tag green">DIY Power</span>
-  </div>
+      <div class="project-card">
+        <h3>Systems Access & Requirements Tool</h3>
+        <p>
+          Created a practical tracking tool to help staff understand which systems they needed, what training was required,
+          and when access requirements had to be renewed.
+        </p>
+        <span class="tag">Tracker</span>
+        <span class="tag">Requirements</span>
+        <span class="tag">Automation Mindset</span>
+      </div>
 
-  <div class="project-card">
-    <h3>GurryWeb Home Lab</h3>
-    <p>
-      A personal home server and lab environment used for Linux, Apache, networking,
-      file sharing, automation, family technology projects, and server administration practice.
-    </p>
-    <span class="tag">Linux</span>
-    <span class="tag">Apache</span>
-    <span class="tag">Networking</span>
-    <span class="tag">Home Lab</span>
-  </div>
+      <div class="project-card">
+        <h3>A-A Events</h3>
+        <p>
+          A learning and blogging platform focused on Army topics, business, technology, DIY projects, money, and life lessons.
+        </p>
+        <p>
+          <a href="https://www.a-aevents.com" target="_blank" rel="noopener noreferrer">Visit A-A Events</a>
+        </p>
+        <span class="tag">WordPress</span>
+        <span class="tag">Blogging</span>
+        <span class="tag">Affiliate Marketing</span>
+        <span class="tag">Learning</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Process Automation Tools</h3>
-    <p>
-      Building practical tools, workflows, trackers, dashboards, and automations
-      to reduce repetitive work, improve visibility, and make follow-up easier.
-    </p>
-    <span class="tag">Automation</span>
-    <span class="tag">Dashboards</span>
-    <span class="tag">Trackers</span>
-    <span class="tag">Workflows</span>
-  </div>
+      <div class="project-card">
+        <h3>Process Automation Tools</h3>
+        <p>
+          Building practical tools, workflows, trackers, dashboards, and automations to reduce repetitive work,
+          improve visibility, and make follow-up easier.
+        </p>
+        <span class="tag">Automation</span>
+        <span class="tag">Dashboards</span>
+        <span class="tag">Trackers</span>
+        <span class="tag">Workflows</span>
+      </div>
 
-  <div class="project-card">
-    <h3>DIY Solar & Battery Projects</h3>
-    <p>
-      Planning and building solar systems, battery banks, inverter setups,
-      backup power solutions, and practical off-grid experiments.
-    </p>
-    <span class="tag green">Solar</span>
-    <span class="tag green">Batteries</span>
-    <span class="tag green">Inverters</span>
-    <span class="tag green">DIY</span>
-  </div>
+      <div class="project-card">
+        <h3>Military QA Tools</h3>
+        <p>
+          Developing trackers, SOPs, evaluation tools, meeting notes, inspection support products, and documentation systems
+          to support Army training quality assurance and accreditation.
+        </p>
+        <span class="tag">Quality Assurance</span>
+        <span class="tag">Training</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Corrective Actions</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Military QA Tools</h3>
-    <p>
-      Developing trackers, SOPs, evaluation tools, meeting notes, inspection support products,
-      and documentation systems to support Army training quality assurance and accreditation.
-    </p>
-    <span class="tag">Quality Assurance</span>
-    <span class="tag">Training</span>
-    <span class="tag">Documentation</span>
-    <span class="tag">Corrective Actions</span>
-  </div>
+      <div class="project-card">
+        <h3>GurryWeb Home Lab</h3>
+        <p>
+          A personal home server and lab environment used for Linux, Apache, networking, file sharing, automation,
+          family technology projects, and server administration practice.
+        </p>
+        <span class="tag">Linux</span>
+        <span class="tag">Apache</span>
+        <span class="tag">Networking</span>
+        <span class="tag">Home Lab</span>
+      </div>
 
-  <div class="project-card">
-    <h3>AndrewGurry.com</h3>
-    <p>
-      Built this professional portfolio using GitHub Pages, custom domain DNS,
-      professional email, and a simple static website approach.
-    </p>
-    <span class="tag gray">GitHub Pages</span>
-    <span class="tag gray">HTML</span>
-    <span class="tag gray">CSS</span>
-    <span class="tag gray">Custom Domain</span>
-  </div>
+      <div class="project-card">
+        <h3>DIY Solar & Battery Projects</h3>
+        <p>
+          Planning and building solar systems, battery banks, inverter setups, backup power solutions,
+          and practical off-grid experiments.
+        </p>
+        <span class="tag green">Solar</span>
+        <span class="tag green">Batteries</span>
+        <span class="tag green">Inverters</span>
+        <span class="tag green">DIY</span>
+      </div>
 
-  <div class="project-card">
-    <h3>Apps, Scripts & Technical Experiments</h3>
-    <p>
-      Ongoing work with small apps, automation scripts, web tools, home technology,
-      Raspberry Pi projects, Linux servers, and practical technical problem-solving.
-    </p>
-    <span class="tag">Apps</span>
-    <span class="tag">Scripts</span>
-    <span class="tag">Automation</span>
-    <span class="tag">Troubleshooting</span>
-  </div>
-</div>
-
+      <div class="project-card">
+        <h3>AndrewGurry.com</h3>
+        <p>
+          Built this professional portfolio using GitHub Pages, custom domain DNS, professional email,
+          and a simple static website approach.
+        </p>
+        <span class="tag gray">GitHub Pages</span>
+        <span class="tag gray">HTML</span>
+        <span class="tag gray">CSS</span>
+        <span class="tag gray">Custom Domain</span>
+      </div>
+    </div>
   </section>
 
   <section id="resume">
@@ -809,22 +963,26 @@
       A formal resume will be added here as my military retirement transition continues.
     </p>
 
-<div class="card">
-  <p>
-    My professional background includes military leadership, deployment leadership,
-    quality assurance, inspections, training management, finance education,
-    process automation, workflow improvement, and hands-on technical projects.
-  </p>
+    <div class="card">
+      <p>
+        My professional background includes military leadership, deployment leadership, quality assurance,
+        Inspector General operations, training management, finance education, maritime operations,
+        process automation, workflow improvement, and hands-on technical projects.
+      </p>
 
-  <p>
-    Resume download coming soon.
-  </p>
+      <p>
+        I bring a practical builder's mindset: find the bottleneck, simplify the process, document the standard,
+        train the team, and build tools that make the right action easier to repeat.
+      </p>
 
-  <p class="small-note">
-    Public resume version will not include home address or private personal information.
-  </p>
-</div>
+      <p>
+        Resume download coming soon.
+      </p>
 
+      <p class="small-note">
+        Public resume version will not include home address, private phone numbers, or sensitive personal information.
+      </p>
+    </div>
   </section>
 
   <section id="contact">
@@ -833,33 +991,32 @@
       Professional networking, consulting conversations, and project discussions.
     </p>
 
-<div class="contact-box">
-  <h3>Let’s build something useful.</h3>
+    <div class="contact-box">
+      <h3>Let’s build something useful.</h3>
 
-  <p>
-    For consulting, professional networking, collaboration, or project discussions:
-  </p>
+      <p>
+        For consulting, professional networking, collaboration, or project discussions:
+      </p>
 
-  <p>
-    <a href="mailto:me@andrewgurry.com">me@andrewgurry.com</a>
-  </p>
+      <p>
+        <a href="mailto:me@andrewgurry.com">me@andrewgurry.com</a>
+      </p>
 
-  <p>
-    AndrewGurry.com
-  </p>
-</div>
-
+      <p>
+        AndrewGurry.com
+      </p>
+    </div>
   </section>
 
   <footer>
     © 2026 Andrew Gurry. All Rights Reserved.
     <div class="footer-links">
       <a href="#about">About</a>
+      <a href="#impact">Impact</a>
       <a href="#consulting">Automation</a>
       <a href="#projects">Projects</a>
       <a href="mailto:me@andrewgurry.com">Contact</a>
     </div>
   </footer>
-
 </body>
 </html>
